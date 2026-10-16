@@ -1,148 +1,87 @@
 # Playtest Report — Stuck On Set
 
-Exploratory gameplay testing and feedback for
-[Stuck On Set](https://driftingsignal.itch.io/stuck-on-set).
-
-## Project Overview
-
-**Game:** Stuck On Set  
-**Developer / studio:** Drifting Signal  
-**Game page:** https://driftingsignal.itch.io/stuck-on-set  
-**Test date:** Not recorded  
-**Build version:** Not recorded  
-**Testing method:** Exploratory manual gameplay testing  
-**Primary input device:** Keyboard and mouse  
-**Additional input tested:** Controller / gamepad  
-
-This repository documents observations made during a playtesting
-session of Stuck On Set, a top-down action roguelite built around
-a movie-production theme.
-
-The purpose of this report is to document gameplay issues,
-control inconsistencies, usability concerns, combat readability,
-and opportunities to improve the player experience.
-
-The findings are based on my own gameplay session. They are not
-a comprehensive quality assurance assessment of the game.
-
-## Testing Scope
-
-The session covered the following areas:
-
-- Tutorial and onboarding
-- Keyboard and controller inputs
-- Character movement and dashing
-- Combat and enemy behavior
-- Boss encounter
-- Weapons and upgrades
-- Traps and combat mechanics
-- In-game menus and interface
-- Progression and upgrade economy
-- Environmental collisions
-- General gameplay readability
-
-Testing was exploratory rather than scripted. I played the game,
-observed its behavior, and took notes when I encountered issues
-or mechanics that warranted further investigation.
+Documentation of an independent exploratory playtest of *Stuck On Set*, focusing on potential bugs, usability, combat clarity, and player experience.
 
 ## Project Context
 
-This project was independently created for QA practice through the Play2Review website. The goal was to document gameplay observations, identify potential bugs and usability issues, and practice writing structured QA reports based on hands-on testing.
+This project was independently created for QA (Quality Assurance) practice through the Play2Review website.
 
-The playtest was conducted on the final executable of *Stuck On Set*, Version 7, available since October 13, 2026. No source code or development environment was used.
+The goal is to document observations from hands-on gameplay, identify potential defects and usability issues, and practice writing structured QA reports.
 
-This repository is an independent portfolio project and is not an official QA report or an endorsement by the game's developers.
+Testing was performed using the game's executable, without access to source code or the development environment.
 
-This repository may be updated based on feedback from the game developer regarding the findings submitted through Play2Review.
+This repository is an independent portfolio project. It is not an official QA report and is not formally affiliated with the game's developers.
 
-## Summary of Findings
+## Test Information
 
-The session revealed issues and opportunities across several
-areas:
+| Field | Details |
+|---|---|
+| Game | Stuck On Set |
+| Game page | [itch.io — Stuck On Set](https://driftingsignal.itch.io/stuck-on-set) |
+| Test date | October 16, 2026 |
+| Tested version | Version 7 |
+| Version availability date | October 13, 2026 |
+| Test type | Exploratory |
+| Test platform | PC |
+| Primary input device | Keyboard and mouse |
+| Additional input device | Controller/gamepad |
+| Test environment | Final executable available to players |
+| Recording tool | OBS Studio was used during the session; no recording is published in this repository |
 
-- Keyboard movement appeared inconsistent, particularly when
-  combining horizontal and vertical inputs.
-- Controller menu navigation was not functional during testing.
-- The tutorial provided incorrect information about the dash
-  controls.
-- Some enemy attacks were difficult to anticipate, and several
-  enemy types were difficult to distinguish.
-- Some enemies appeared to spawn partially inside the ground
-  and become stuck.
-- Some wall collisions appeared incorrect.
-- The "Call Sheet" and other menus felt visually cluttered.
-- Certain weapons and upgrades felt less effective or less
-  controllable than others.
-- Some gameplay mechanics, including trap setup time and
-  Genre progression, could be communicated more clearly.
+## Testing Approach
 
-These findings include both observed technical behavior and
-subjective usability or design feedback. Not every observation
-has been confirmed as a defect.
+Testing was exploratory and based on my experience as a long-time gamer. No predefined test script or formal test case suite was used.
 
-## Positive Observations
+During the session, I explored the controls, menus, weapons, upgrades, traps, enemies, combat encounters, and other systems available in the tested version.
 
-Several elements showed promise:
+Findings describe behaviors observed during gameplay. Reproduction steps are included only when the behavior could be described clearly using the available executable, without access to source code or the development environment.
 
-- **Dashing:** The dash felt fluid and responsive.
-- **Galleria Shotgun:** The weapon was straightforward and
-  satisfying to use, although it may be stronger than intended.
-- **Survival encounters:** The enclosed survival mission created
-  an intense and engaging situation.
-- **Roguelite structure:** Weapons, Roles, Scripts, and Genres
-  suggest opportunities for varied builds and replayability.
-- **Theme:** The movie-set concept provides a distinctive
-  foundation for the game's identity.
+The findings should not automatically be interpreted as confirmed defects. Some behaviors may be intentional design choices, known limitations, or issues requiring further investigation.
 
-These strengths are worth preserving while improving controls,
-readability, and overall polish.
+## Key Findings
 
-## Main Areas for Improvement
+### Controls and Movement
 
-### 1. Controls and Input
+- Keyboard movement appears to have different speeds along the horizontal and forward/backward axes.
+- Diagonal movement does not appear to work consistently.
+- Menus do not appear to be fully usable with a controller.
+- The tutorial provides incorrect instructions for the dash command.
+- The dash feels responsive and fluid, but the overall movement experience is affected by the observed control issues.
 
-Keyboard movement appeared to favor horizontal movement over
-vertical movement, making diagonal movement difficult.
+### Combat and Enemies
 
-Controller menu navigation was not functional during testing.
-The tutorial also incorrectly described the dash inputs:
-RT/R2 fired the weapon, while RB/R1 performed the dash.
+- Some enemy types are difficult to distinguish during combat.
+- Certain attacks do not appear to provide sufficiently clear visual warning cues before dealing damage.
+- Inconsistent-looking projectile and enemy behaviors make the source of damage difficult to identify.
+- Some enemies appear to spawn partially inside the ground and may become unable to move.
+- The boss's immunity text can create uncertainty about how to overcome its defenses.
+- Clown balloons appear to damage the player when touched and when shot, although the intended behavior was unclear during testing.
 
-### 2. Combat Readability
+### Weapons, Upgrades, and Progression
 
-Some enemies were difficult to distinguish from one another.
-Several attacks lacked clear telegraphs, and incoming damage
-sometimes felt unpredictable.
+- The Galleria Shotgun provides a satisfying combat experience but appeared potentially stronger than other tested options.
+- Ol' Painless has a reasonable rate of fire, but its long-range accuracy appears limited.
+- Sentinel Spheres may require the player to approach enemies dangerously closely.
+- The upgrade that creates two small traps feels less controllable than using a single trap.
+- The relationship between Genre points, upgrades, and sacrificing maximum health was not sufficiently clear.
+- The available budget appears generous, allowing the purchase of many presented upgrades. It was not possible to determine whether this is intentional.
 
-The boss's large "IMMUNE" text and shield initially made its
-intended interaction unclear.
+### Interface and Usability
 
-### 3. Interface and Tutorial
+- The Call Sheet contains many visual elements, making functional information harder to distinguish from decorative elements.
+- The tutorial appears to rely too heavily on the manual to explain some systems.
+- The ESC menu uses white text on a gray background, which appears to provide insufficient contrast.
+- The camera occasionally appears to clip into or move too close to scenery, and it was mistaken for an enemy during gameplay.
+- Trap setup time is not sufficiently apparent, although the behavior seems to be part of the intended mechanic.
 
-The Call Sheet and other menus felt cluttered. Although this
-may support the movie-production aesthetic, gameplay-relevant
-information could be separated more clearly from decoration.
+## Positive Aspects
 
-The tutorial relied too heavily on the written manual to explain
-important gameplay concepts.
-
-### 4. Collision and Enemy Behavior
-
-Some wall collisions appeared incorrect, and some enemies
-appeared to spawn partially inside the ground and become stuck.
-
-The relevant footage should be reviewed before determining the
-cause or scope of these behaviors.
-
-### 5. Weapons and Progression
-
-"Sentinel Spheres" encouraged dangerous proximity to enemies.
-"Ol' Painless" felt unreliable at range because of its poor
-accuracy. The double-small-trap upgrade also felt less
-reliable than using a single trap.
-
-Genre point acquisition and the trade-off involving maximum
-health were not sufficiently clear during the session.
+- The dash feels responsive and satisfying to use.
+- The movie-production theme gives the game a distinctive identity.
+- Survival missions in enclosed environments create intense and engaging combat encounters.
+- The Galleria Shotgun provides a satisfying sense of impact and effectiveness.
+- The weapon and upgrade systems encourage experimentation.
+- Combat has enjoyable moments despite the observed clarity issues.
 
 ## Testing Limitations
 
@@ -155,27 +94,27 @@ health were not sufficiently clear during the session.
 - **Performance:** No crashes, performance drops, or other performance issues were observed or reported during the session.
 - **Meta-progression:** No noticeable meta-progression system was encountered during testing. Its presence or absence was not independently verified.
 
-The findings represent observations from a single exploratory playtest of Version 7. Behaviors may be intentional design choices, known limitations, or defects; further investigation by the development team may be necessary to determine which applies.
+The absence of a reported issue does not establish that the corresponding system is free of defects.
 
+## Repository Structure
 
-## Conclusion
-
-Stuck On Set has a promising foundation, particularly in its
-dash mechanics, weapon feel, and intense survival encounters.
-
-The most important areas to investigate are keyboard movement,
-controller menu navigation, tutorial accuracy, combat
-readability, and collision behavior.
-
-The reports in this repository are intended to provide
-actionable feedback while distinguishing observed behavior
-from subjective impressions and unverified explanations.
-
-No claims are made about the status of these issues in
-subsequent builds.
+- `README.md` — project overview in English.
+- `README.pt-BR.md` — project overview in Brazilian Portuguese.
+- `bug-reports.md` — bug reports and observations in English.
+- `bug-reports.pt-BR.md` — bug reports and observations in Brazilian Portuguese.
 
 ## Feedback and Corrections
 
-Feedback from the developer is welcome. If any findings are inaccurate, have already been addressed, or require additional context, I am open to reviewing and correcting the documentation.
+Feedback from the developers is welcome. If any finding is inaccurate, has already been addressed, or requires additional context, I am open to reviewing and correcting the documentation.
 
-For concerns regarding the content of this repository, the developer may contact me to discuss possible corrections or removal of specific material.
+If the developers have concerns about the content of this repository, they may contact me to discuss possible corrections or the removal of specific material.
+
+This repository may be updated based on developer feedback regarding the findings submitted through Play2Review.
+
+## Conclusion
+
+The playtest identified opportunities for improvement in control consistency, attack clarity, enemy differentiation, communication of gameplay mechanics, and interface visual hierarchy.
+
+The game also demonstrated positive qualities, particularly in dash responsiveness, thematic identity, and the combat experience provided by certain weapons.
+
+These reports represent observations from a single exploratory playtest and should be interpreted within the limitations described in this document.
